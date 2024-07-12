@@ -1,0 +1,14 @@
+---
+interface Props {
+	idAttrib: string;
+}
+
+const { idAttrib } = Astro.props;
+---
+
+<h2
+	id={idAttrib}
+	class="font-serif font-light mb-2"
+>
+	<slot />
+</h2>

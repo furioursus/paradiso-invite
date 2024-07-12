@@ -1,0 +1,112 @@
+---
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+
+const description =
+	"Come join me, Aditya for my birthday celebration in the park!";
+import "@fontsource-variable/nunito";
+import "@fontsource-variable/lora";
+import HeroImage from "~/components/HeroImage.astro";
+import Nav from "~/components/Nav.astro";
+import OnParadise from "~/components/OnParadise.astro";
+import When from "~/components/When.astro";
+import Where from "~/components/Where.astro";
+import Info from "~/components/Info.astro";
+---
+
+<html
+	class="scroll-smooth"
+	lang="en"
+>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<link
+			rel="icon"
+			href="/favicon.svg"
+			type="image/svg+xml"
+		/>
+		<meta
+			name="generator"
+			content={generator}
+		/>
+
+		<title>
+			Paradiso - Celebrating Aditya&rsquo;s birthday in Central Park
+		</title>
+		<meta
+			name="description"
+			content={description}
+		/>
+
+		<!-- social media -->
+		<meta
+			property="og:title"
+			content="Paradiso - Celebrating Aditya’s birthday in Central Park"
+		/>
+		<meta
+			property="og:type"
+			content="website"
+		/>
+		<meta
+			property="og:description"
+			content={description}
+		/>
+		<meta
+			property="og:image"
+			content={image}
+		/>
+		<meta
+			property="og:url"
+			content={site}
+		/>
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
+	</head>
+	<body class="font-sans bg-blue-100 relative z-0">
+		<video
+			class="fixed z-0 inset-0 opacity-25"
+			autoplay
+			muted
+			loop
+		>
+			<source
+				src="https://assets.getpartiful.com/backgrounds/pool/web.mp4"
+				type="video/mp4"
+			/>
+		</video>
+		<div class="md:inset-0 md:left-1/2 md:fixed md:z-0 z-10 relative">
+			<HeroImage />
+		</div>
+		<div
+			class="p-4 z-10 md:p-8 xl:p-16 md:text-xl xl:text-2xl relative prose md:w-1/2 overflow-x-hidden"
+		>
+			<h1 class="font-serif font-normal">Paradiso</h1>
+			<Nav />
+			<p>
+				For my birthday this year, I am celebrating this trip around the sun by
+				hosting a paradisiacal celebration in Central Park. Come join in the
+				festivities!
+			</p>
+
+			<OnParadise />
+			<When />
+			<Where />
+			<Info />
+			<footer class="border-t border-t-coyote text-night/50 text-xs">
+				<p>
+					This website was coded through much toil, tribulation, and love by <a
+						href="https://furioursus.dev">Christopher</a
+					>
+					for Sir Aditya’s birthday.
+				</p>
+				<p>Happy birthday, Sir. ❤️🐯</p>
+			</footer>
+		</div>
+	</body>
+</html>
