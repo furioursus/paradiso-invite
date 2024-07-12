@@ -69,17 +69,6 @@ import Info from "~/components/Info.astro";
 		/>
 	</head>
 	<body class="font-sans bg-blue-100 relative z-0">
-		<video
-			class="fixed z-0 inset-0 opacity-25"
-			autoplay
-			muted
-			loop
-		>
-			<source
-				src="https://assets.getpartiful.com/backgrounds/pool/web.mp4"
-				type="video/mp4"
-			/>
-		</video>
 		<div class="md:inset-0 md:left-1/2 md:fixed md:z-0 z-10 relative">
 			<HeroImage />
 		</div>
@@ -98,10 +87,12 @@ import Info from "~/components/Info.astro";
 			<When />
 			<Where />
 			<Info />
-			<footer class="border-t border-t-coyote text-night/50 text-xs">
+			<footer class="border-t border-t-outer-space text-outer-space/50 text-xs">
 				<p>
 					This website was coded through much toil, tribulation, and love by <a
-						href="https://furioursus.dev">Christopher</a
+						class="opacity-50"
+						href="https://furioursus.dev"
+						>Christopher</a
 					>
 					for Sir Aditya’s birthday.
 				</p>
